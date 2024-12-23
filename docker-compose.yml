@@ -13,4 +13,4 @@ services:
     working_dir: /app_root
     tty: true
     stdin_open: true
-    command: uv run app.py
+    command: poetry run python app.py
