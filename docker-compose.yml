@@ -1,0 +1,16 @@
+services:
+  bot:
+    container_name: arxiv_bot
+    build: .
+    environment:
+      UV_PROJECT_ENVIRONMENT: /venv # create virtual environment in /venv inside the container
+    volumes:
+      - type: bind
+        source: ./arxiv_bot
+        target: /app_root
+    env_file:
+      - .env
+    working_dir: /app_root
+    tty: true
+    stdin_open: true
+    command: uv run app.py
