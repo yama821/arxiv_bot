@@ -5,6 +5,22 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
+    "openai>=1.58.1",
     "py-cord>=2.6.1",
     "ruff>=0.8.4",
 ]
+
+[tool.poetry]
+name = "arxiv-bot"
+version = "0.1.0"
+description = ""
+authors = ["Ryosuke Yamaguchi"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
