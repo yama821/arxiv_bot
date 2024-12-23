@@ -37,3 +37,14 @@ class LLMClient:
         })
 
         return response
+    
+    def summarize(self, text):
+        prompt = f"""次の文章を日本語で要約してください。
+# 制約
+* 箇条書きで3項目以内にまとめること
+* 専門用語は英語のまま用いること
+* 簡潔にすること
+
+# 文章
+{text}"""
+        return self.singleGeneration(prompt)
